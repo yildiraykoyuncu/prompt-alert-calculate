@@ -2,43 +2,43 @@
 <html lang='en'>
 
 <head>
-  <meta charset='utf-8'>
-  <title>prompt, alert, calculate</title>
+    <meta charset='utf-8'>
+    <title>prompt, alert, calculate</title>
 
-  <!-- load the styles -->
-  <link rel="stylesheet" href="style.css">
+    <!-- load the styles -->
+    <link rel="stylesheet" href="style.css">
 
-  <!-- load the shared data -->
-  <script src='./scripts/shared-variables.js'></script>
+    <!-- load the shared data -->
+    <script src='./scripts/shared-variables.js'></script>
 
-  <!-- load the handler scripts -->
-  <script src="./scripts/handlers/instructions.js"></script>
-  <script src='./scripts/handlers/add.js'></script>
-  <script src='./scripts/handlers/divide.js'></script>
-  <script src='./scripts/handlers/multiply.js'></script>
-  <script src='./scripts/handlers/subtract.js'></script>
+    <!-- load the handler scripts -->
+    <script src="./scripts/handlers/instructions.js"></script>
+    <script src='./scripts/handlers/add.js'></script>
+    <script src='./scripts/handlers/divide.js'></script>
+    <script src='./scripts/handlers/multiply.js'></script>
+    <script src='./scripts/handlers/subtract.js'></script>
 
-  <script src='./scripts/handlers/last-result-display.js'></script>
-  <script src='./scripts/handlers/last-result-reset.js'></script>
+    <script src='./scripts/handlers/last-result-display.js'></script>
+    <script src='./scripts/handlers/last-result-reset.js'></script>
 
-  <!-- Leave this here!  It renders the review buttons  -->
-  <script src='./review-buttons/init.js'></script>
+    <!-- Leave this here!  It renders the review buttons  -->
+    <script src='./review-buttons/init.js'></script>
 
 </head>
 
 <body>
 
-  <div id='user-interface' class='centered'>
-    
-    <button class="btn" onclick='instructionsHandler()'>Instructions</button> <br>
-    <button class="btn" onclick='add()'>Add</button>
-    <button class="btn" onclick='divide()'>Divide</button>
-    <button class="btn" onclick='multiply()'>Multiply</button>
-    <button class="btn" onclick='subtract()'>Subtract</button> <br>
+    <div id='user-interface' class='centered'>
 
-    <button class="btn" onclick='displayLastResultHandler()'>Display Last Result</button>
-    <button class="btn" onclick='resetLastResultHandler()'>Reset Last Result</button>
-  </div>
+        <button class="btn" onclick='instructionsHandler()'>Instructions</button> <br>
+        <button class="btn" onclick='add()'>Add</button>
+        <button class="btn" onclick='divide()'>Divide</button>
+        <button class="btn" onclick='multiply()'>Multiply</button>
+        <button class="btn" onclick='subtractHandler()'>Subtract</button> <br>
+
+        <button class="btn" onclick='displayLastResultHandler()'>Display Last Result</button>
+        <button class="btn" onclick='resetLastResultHandler()'>Reset Last Result</button>
+    </div>
 
 </body>
 

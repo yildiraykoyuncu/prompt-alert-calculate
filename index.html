@@ -12,6 +12,7 @@
   <script src='./scripts/shared-variables.js'></script>
 
   <!-- load the handler scripts -->
+  <script src="./scripts/handlers/instructions.js"></script>
   <script src='./scripts/handlers/add.js'></script>
   <script src='./scripts/handlers/divide.js'></script>
   <script src='./scripts/handlers/multiply.js'></script>
@@ -28,10 +29,12 @@
 <body>
 
   <div id='user-interface' class='centered'>
+    
+    <button class="btn" onclick='instructionsHandler()'>Instructions</button> <br>
     <button class="btn" onclick='add()'>Add</button>
     <button class="btn" onclick='divide()'>Divide</button>
     <button class="btn" onclick='multiply()'>Multiply</button>
-    <button class="btn" onclick='subtract()'>Subtract</button>
+    <button class="btn" onclick='subtract()'>Subtract</button> <br>
 
     <button class="btn" onclick='displayLastResultHandler()'>Display Last Result</button>
     <button class="btn" onclick='resetLastResultHandler()'>Reset Last Result</button>

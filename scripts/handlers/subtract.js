@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-console.log('-- loading: subtract --');
+console.log("-- loading: subtract --");
 
 /**
  * subtracts two valid numbers and returns the difference
@@ -9,93 +9,106 @@ console.log('-- loading: subtract --');
  * @returns {number}
  */
 function subtract(x, y) {
-    if (typeof x !== 'number') { throw new TypeError('x'); }
-    if (typeof y !== 'number') { throw new TypeError('y'); }
+    if (typeof x !== "number") {
+        throw new TypeError("x");
+    }
+    if (typeof y !== "number") {
+        throw new TypeError("y");
+    }
 
     const result = x - y;
 
-    if (typeof result !== 'number') { throw new TypeError('result'); }
+    if (typeof result !== "number") {
+        throw new TypeError("result");
+    }
     return result;
 }
-
-
-{
-    console.log('-- testing: subtract ');
-    debugger;
+debugger; {
+    console.log("-- testing: subtract ");
 
     const _1_expect = -2;
     const _1_actual = subtract(-1, 1);
-    console.assert(_1_actual === _1_expect, 'Test 1');
+    console.assert(_1_actual === _1_expect, "Test 1");
 
     const _2_expect = 2;
     const _2_actual = subtract(1, -1);
-    console.assert(_2_actual === _2_expect, 'Test 2');
+    console.assert(_2_actual === _2_expect, "Test 2");
 
     const _3_expect = 126;
     const _3_actual = subtract(84, -42);
-    console.assert(_3_actual === _3_expect, 'Test 3');
+    console.assert(_3_actual === _3_expect, "Test 3");
 
     const _4_expect = 0;
     const _4_actual = subtract(0, 0);
-    console.assert(Object.is(_4_actual, _4_expect), 'Test 4');
+    console.assert(Object.is(_4_actual, _4_expect), "Test 4");
 
     const _5_expect = Infinity;
     const _5_actual = subtract(Infinity, 3);
-    console.assert(_5_actual === _5_expect, 'Test 5');
+    console.assert(_5_actual === _5_expect, "Test 5");
 
     const _6_expect = -0.1;
     const _6_actual = subtract(0.1, 0.2);
-    console.assert(_6_actual === _6_expect, 'Test 6');
+    console.assert(_6_actual === _6_expect, "Test 6");
 
-    const _7_expect = 'TypeError: x';
+    const _7_expect = "TypeError: x";
     let _7_actual;
     try {
         subtract(false, 2);
     } catch (err) {
         _7_actual = `${err.name}: ${err.message}`;
     }
-    console.assert(_7_actual === _7_expect, 'Test 7');
+    console.assert(_7_actual === _7_expect, "Test 7");
 
-    const _8_expect = 'TypeError: y';
+    const _8_expect = "TypeError: y";
     let _8_actual;
     try {
         subtract(1, null);
     } catch (err) {
         _8_actual = `${err.name}: ${err.message}`;
     }
-    console.assert(_8_actual === _8_expect, 'Test 8');
+    console.assert(_8_actual === _8_expect, "Test 8");
 
-    const _9_expect = 'TypeError: x';
+    const _9_expect = "TypeError: x";
     let _9_actual;
     try {
-        subtract('1', '2');
+        subtract("1", "2");
     } catch (err) {
         _9_actual = `${err.name}: ${err.message}`;
     }
-    console.assert(_9_actual === _9_expect, 'Test 9');
+    console.assert(_9_actual === _9_expect, "Test 9");
 }
-
 
 function subtractHandler() {
     debugger;
-    console.log('-- action: subtract');
-    console.log('lastResult (before):', typeof lastResult, '\n', lastResult);
+    console.log("-- action: subtract");
+    console.log("lastResult (before):", typeof lastResult, "\n", lastResult);
 
     // read a number from the user
-    let num1 = Number(prompt("enter first number"));
+    let input1 = prompt("enter first number");
+    if (input1 === "" || input1 === null) {
+        alert("please enter a number");
+        return;
+    }
+    let num1 = Number(input1);
     if (isNaN(num1)) {
         alert("please enter a valid number");
         return;
-    };
-    let num2 = Number(prompt("enter second number"));
+    }
+
+    let input2 = prompt("enter second number");
+    if (input2 === "" || input2 === null) {
+        alert("please enter a number");
+        return;
+    }
+    let num2 = Number(input2);
     if (isNaN(num2)) {
         alert("please enter a valid number");
         return;
-    };
+    }
 
     // subtract the last result by the user's number and reassign lastResult
     lastResult = subtract(num1, num2);
-    console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+    console.log("lastResult (after):", typeof lastResult, "\n", lastResult);
 
     alert(`the new result is: ${lastResult}`);
 }

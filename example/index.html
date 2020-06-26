@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html lang='en'>
-
+<html lang="en">
 <head>
-  <meta charset='utf8'>
-  <title>Example: set/display a number</title>
+    <meta charset="UTF-8">
+    <title>Example: set/display a number</title>
 
-  <link rel="stylesheet" href="./style.css">
-
-  <script src='./scripts/shared-variable.js'></script>
-
-  <script src='./scripts/handlers/set.js'></script>
-  <script src='./scripts/handlers/display.js'></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src='./scripts/shared-variable.js'></script>
+    <script src='./scripts/handlers/set.js'></script>
+    <script src='./scripts/handlers/display.js'></script>
 
 </head>
-
 <body>
-  <div id='user-interface' class='centered'>
-    <button onclick='setHandler()'>set the number</button> <br>
-    <button onclick='displayHandler()'>display the number</button>
-  </div>
-</body>
+    <div class="calculator">
 
+        <input type="text" class="calculator-screen" value="0" disabled />
+
+        <div class="calculator-keys">
+
+          <button type="button" class="operator" value="+">Add</button>
+          <button type="button" class="operator" value="-">Subt</button>
+          <button type="button" class="operator" value="*">Mul</button>
+          <button type="button" class="operator" value="/">Div</button>
+
+          <button type="button" value="display-last-result">DL</button>
+
+          <button type="button" value="reset-last-result">RL</button>
+          <button type="button" class="all-clear" value="all-clear">Instruction</button>
+
+
+        </div>
+      </div>
+</body>
 </html>

@@ -12,7 +12,7 @@ function divide(x, y) {
   if (typeof x !== 'number') { throw new TypeError('x'); }
   if (typeof y !== 'number') { throw new TypeError('y'); }
 
-  const result = _;
+  const result = x / y;
 
   if (typeof result !== 'number') { throw new TypeError('result'); }
   return result;
@@ -82,10 +82,19 @@ function divideHandler() {
   console.log('lastResult (before):', typeof lastResult, '\n', lastResult);
 
   // read a number from the user
-
+  let num1 = Number(prompt("enter first number"));
+    if (isNaN(num1)) {
+        alert("please enter a valid number");
+        return;
+    };
+    let num2 = Number(prompt("enter second number"));
+    if (isNaN(num2)) {
+        alert("please enter a valid number");
+        return;
+    };
 
   // divide the last result by the user's number and reassign lastResult
-  _;
+  lastResult = divide(num1, num2);
   console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
 
   alert(`the new result is: ${lastResult}`);

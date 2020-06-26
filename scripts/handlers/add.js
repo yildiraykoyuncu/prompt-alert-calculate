@@ -3,24 +3,26 @@
 console.log('-- loading: add --');
 
 /**
- * adds two valid numbers and returns the sum
+ * subtracts two valid numbers and returns the difference
  * @param {number} x - the left operand
  * @param {number} y - the right operand
  * @returns {number}
  */
+
 function add(x, y) {
-  if (typeof x !== 'number') { throw new TypeError('x'); }
-  if (typeof y !== 'number') { throw new TypeError('y'); }
 
-  const result = _;
+    if (typeof x !== 'number') { throw new TypeError ('x');} 
+    if (typeof y !== 'number') { throw new TypeError ('y'); }
 
-  if (typeof result !== 'number') { throw new TypeError('result'); }
-  return result;
+    const result = x + y;
+
+    if (typeof result !== 'number') { throw new TypeError('result'); }
+    return result;
 }
 
 
 {
-  console.log('-- testing: add ');
+  console.log('-- testing: subtract ');
   debugger;
 
   const _1_expect = 0;
@@ -84,9 +86,21 @@ function addHandler() {
 
   // read a number from the user
 
+  let num1 = Number(prompt("enter first number"));
+  if (isNaN(num1)) {
+    alert("please enter a valid number");
+    return};
+
+  let num2 = Number(prompt("enter second number"));
+  if (isNaN(num2)) {
+    alert("please enter a valid number");
+    return;
+};
+
   // add the user's number to the last result and reassign lastResult
-  _;
+  lastResult = add(num1, num2);
   console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
 
   alert(`the new result is: ${lastResult}`);
+  
 }

@@ -27,19 +27,18 @@
 </head>
 
 <body>
-
-    <div id='user-interface' class='centered'>
-
-        <button class="btn" onclick='instructionsHandler()'>Instructions</button> <br>
-        <button class="btn" onclick='addHandler()'>Add</button>
-        <button class="btn" onclick='divideHandler()'>Divide</button>
-        <button class="btn" onclick='multiplyHandler()'>Multiply</button>
-        <button class="btn" onclick='subtractHandler()'>Subtract</button> <br>
-
-        <button class="btn" onclick='displayLastResultHandler()'>Display Last Result</button>
-        <button class="btn" onclick='resetLastResultHandler()'>Reset Last Result</button>
+    <div class="calculator">
+    
+    <div id='user-interface' class="calculator-keys">
+        <button class="operator" onclick='addHandler()'>Add</button>
+        <button class="operator" onclick='divideHandler()'>Divide</button>
+        <button class="operator" onclick='multiplyHandler()'>Multiply</button>
+        <button class="operator" onclick='subtractHandler()'>Subtr</button>
+        <button class="reset-last-result" onclick='displayLastResultHandler()'>DisLs</button>
+        <button class="value="display-last-result" onclick='resetLastResultHandler()'>ResLs</button>
+        <button class="all-clear" onclick='instructionsHandler()'>Instructions</button> 
     </div>
-
+</div>
 </body>
 
 </html>
